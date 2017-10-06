@@ -9,16 +9,16 @@ import muiTheme from './config/theme';
 
 import Layout from './components/Layout';
 import Login from './containers/Login';
-import Header from './containers/Header';
+
+
 
 injectTapEventPlugin();
 
 const Boomtown = () => (
     <MuiThemeProvider muiTheme={muiTheme}>
-        {/* <Layout> */}
+        <Layout>
             {/* <Login /> */}
-        <Header />
-        {/* </Layout> */}
+        </Layout>
     </MuiThemeProvider>
 
 );

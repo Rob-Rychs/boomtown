@@ -21,18 +21,16 @@ const names = [
 
 class Header extends Component {
 
-    constructor(props) {
-        super(props);
-        this.setState({
-            values: [],
-        }
-    );
+    state = {
+        values: [],
+        filters: [...names]
     }
 
     handleChange = (event, index, values) => this.setState({ values });
 
-    menuItems(values) {
-        return names.map((name) => (
+    getMenuItems = () => {
+        const { filters, values } = this.state;
+        return filters.map((name) => (
             <MenuItem
                 key={name}
                 insetChildren
@@ -43,8 +41,8 @@ class Header extends Component {
     ));
     }
 
-
     render() {
+        const { values } = this.state;
         return (
                 <AppBar
                     iconElementLeft={
@@ -56,11 +54,11 @@ class Header extends Component {
                             hintText="Filter By Tag"
                             className="selectfield"
                             multiple
-                            value={this.values}
+                            value={values}
                             onChange={this.handleChange}
-                            style={{ margin: 'auto 0' }}
+                            style={{ margin: 'auto 0', width: 300 }}
                         >
-                            {this.menuItems(this.values)}
+                            {this.getMenuItems()}
                         </SelectField>
                     }
                     style={{ backgroundColor: 'white', height: '60px', width: '100vw' }}
