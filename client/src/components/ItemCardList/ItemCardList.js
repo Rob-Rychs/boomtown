@@ -1,12 +1,12 @@
 import React from 'react';
 import ItemCard from '../ItemCard/ItemCard';
 
-const ItemCardList = ({ itemData }) => {
-    console.log(itemData);
+const ItemCardList = ({ itemData, userData }) => {
+    console.log(itemData, userData);
     return (
         <div>
             { itemData.map((item) => (
-                <ItemCard itemData={item} key={item.id} />
+                <ItemCard itemData={item} userData={userData} key={item.id} />
         )) }
         </div>
     );

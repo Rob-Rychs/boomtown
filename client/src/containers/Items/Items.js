@@ -21,13 +21,23 @@ class Items extends Component {
               });
           // console.log(this.state);
           // console.log(this.state.itemData);
-          })
+          });
+      fetch('http://localhost:3001/users')
+        .then(response => response.json())
+        .then(data => {
+            this.setState({
+                userData: data,
+            });
+        // console.log(this.state);
+        // console.log(this.state.userData);
+        });    
 }
 
 render() {
   return ( 
       <ItemCardList
-          itemData={this.state.itemData}
+          itemData={this.state.itemData} 
+          userData={this.state.userData}
       />
   );
 }
