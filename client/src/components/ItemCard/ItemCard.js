@@ -11,20 +11,17 @@ const ItemCard = ({ itemData })  => {
       <img src={itemData.imageUrl} alt="" />
     </CardMedia>
     <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
+      title="User name"
+      subtitle="Last seen"
       avatar="images/jsa-128.jpg"
     />
 
-    <CardTitle title="Card title" subtitle="Card subtitle" />
+    <CardTitle title={itemData.title} subtitle={itemData.tags.toString().replace(',', ', ')} />
     <CardText>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+      {itemData.description}
     </CardText>
     <CardActions>
-      <RaisedButton label="Borrow" />
+      <RaisedButton label="Borrow" labelColor="white" backgroundColor="rgb(38, 50, 56)" />
     </CardActions>
   </Card>
 );
