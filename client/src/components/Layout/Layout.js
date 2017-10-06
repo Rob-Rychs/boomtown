@@ -5,6 +5,7 @@ import './styles.css';
 
 import Items from '../../containers/Items/Items';
 import Header from '../../containers/Header';
+import NotFound from '../../containers/NotFound';
 
 
 const Layout = ({ children }) => (
@@ -15,7 +16,8 @@ const Layout = ({ children }) => (
         </div>
         <div className="appContent">
             {children}
-            <Items />
+            {<Items />}
+            {/* <NotFound /> */}
         </div>
         {/* And a footer here, but not on the login route... */}
         <p className="footer-text">

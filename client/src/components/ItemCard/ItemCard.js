@@ -3,7 +3,7 @@ import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'm
 import RaisedButton from 'material-ui/RaisedButton';
 import './styles.css';
 
-const ItemCard = ({ itemData, userData })  => {
+const ItemCard = ({ itemData, userData }) => {
 
   return (
   <Card style={{ display: 'inline-block', margin: '20px 10px' }} className="single-item-card">
