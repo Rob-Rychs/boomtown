@@ -5,6 +5,8 @@ firebase-admin.json
 
 # dependencies
 node_modules
+/server/node_modules/
+/client/node_modules/
 
 # testing
 coverage
