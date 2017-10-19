@@ -8,7 +8,7 @@ const resolveFunctions = {
     },
     users() {
       return fetch('http://localhost:3001/users')
-        .then(response => response.jspn())
+        .then(response => response.json())
         .catch(errors => console.log(errors));
     },
     item(root, { id }) {
